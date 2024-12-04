@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integración Bases de Datos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Formulario para ingresar/editar o eliminar usuarios</h1>
+
+  <section id="sqlite">
+    <h2>SQLite</h2>
+    <form id="sqliteForm">
+      <input type="text" id="sqliteName" placeholder="Nombre" required />
+      <input type="email" id="sqliteEmail" placeholder="Email" required />
+      <input type="number" id="sqliteAge" placeholder="Edad" required /> 
+      <input type="text" id="sqliteCountry" placeholder="País" required />
+      <button type="submit">Crear Usuario</button>
+    </form>
+    <h3>Usuarios en SQLite</h3>
+    <ul id="sqliteUsersList"></ul>
+  
+    <div id="editSQLiteFormContainer" style="display: none;">
+      <h3>Editar Usuario</h3>
+      <form id="editSQLiteForm">
+        <input type="hidden" id="editSQLiteId" />
+        <input type="text" id="editSQLiteName" placeholder="Nombre" required />
+        <input type="email" id="editSQLiteEmail" placeholder="Email" required />
+        <input type="number" id="editSQLiteAge" placeholder="Edad" required /> >
+        <input type="text" id="editSQLiteCountry" placeholder="País" required /> 
+        <button type="submit">Guardar Cambios</button>
+        <button type="button" id="cancelEditSQLite">Cancelar</button>
+      </form>
+    </div>
+  </section>
+  
+  <section id="mongo">
+    <h2>MongoDB</h2>
+    <form id="mongoForm">
+      <input type="text" id="mongoName" placeholder="Nombre" required />
+      <input type="email" id="mongoEmail" placeholder="Email" required />
+      <input type="number" id="mongoAge" placeholder="Edad" required /> 
+      <input type="text" id="mongoCountry" placeholder="País" required /> 
+      <button type="submit">Crear Usuario</button>
+    </form>    
+    <h3>Usuarios en MongoDB</h3>
+    <ul id="mongoUsersList"></ul>
+  
+    <div id="editMongoFormContainer" style="display: none;">
+      <h3>Editar Usuario</h3>
+      <form id="editMongoForm">
+        <input type="hidden" id="editMongoId" />
+        <input type="text" id="editMongoName" placeholder="Nombre" required />
+        <input type="email" id="editMongoEmail" placeholder="Email" required />
+        <input type="number" id="editMongoAge" placeholder="Edad" required /> 
+        <input type="text" id="editMongoCountry" placeholder="País" required />
+        <button type="submit">Guardar Cambios</button>
+        <button type="button" id="cancelEditMongo">Cancelar</button>
+      </form>
+    </div>
+  </section>
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
